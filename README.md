@@ -4,6 +4,8 @@
 
 An interactive Jupyter notebook demonstrating **Singular Value Decomposition (SVD)** applied to real audio data. Decompose sound into its fundamental "audio atoms" and explore how much information can be discarded while preserving what we hear.
 
+To interact with this notebook, you can use the notebook here: https://colab.research.google.com/drive/1mA7Th30YtRMqi1xqK6vc7dSshFNpb0-S?usp=sharing
+
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange.svg)
 ![NumPy](https://img.shields.io/badge/NumPy-2.0+-green.svg)
@@ -11,7 +13,7 @@ An interactive Jupyter notebook demonstrating **Singular Value Decomposition (SV
 
 ---
 
-## 🧠 The Key Insight
+## The Key Insight
 
 A **spectrogram** is simply a matrix $M \in \mathbb{R}^{F \times T}$ where:
 - **Rows** = frequency bins (what pitches are present)
@@ -29,44 +31,7 @@ Each term is a **rank-1 pattern**:
 
 As we increase $k$, we literally add more "audio atoms" back into our reconstruction!
 
----
-
-## ✨ Features
-
-- **🎵 Pre-loaded Demo Song** — "Running Through Me" by Tom Misch (an absolute banger)
-- **📁 Custom Audio Upload** — Analyze your own WAV, MP3, or FLAC files
-- **🎙️ Browser Recording** — Record audio directly in the notebook
-- **📊 Interactive Visualizations** — Beautiful spectrograms with custom colormap
-- **🔬 SVD Analysis** — Full decomposition with energy distribution plots
-- **🎧 Audio Reconstruction** — Hear what different compression levels sound like
-- **📈 Compression Analysis** — Explore the trade-off between quality and components
-
----
-
-## 🚀 Quick Start
-
-### Option 1: Google Colab (Recommended)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ASmolyar/Music-PCA/blob/main/Aaron_Smolyar_Audio_SVD.ipynb)
-
-Just click the badge above and run all cells!
-
-### Option 2: Local Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/ASmolyar/Music-PCA.git
-cd Music-PCA
-
-# Install dependencies
-pip install numpy librosa soundfile matplotlib ipywidgets scipy
-
-# Launch Jupyter
-jupyter notebook Aaron_Smolyar_Audio_SVD.ipynb
-```
-
----
-
-## 📐 The Math
+## The Math
 
 ### Short-Time Fourier Transform (STFT)
 Converts the 1D audio waveform into a 2D time-frequency representation by:
@@ -93,7 +58,7 @@ The **Eckart-Young theorem** guarantees this is the optimal rank-$k$ approximati
 
 ---
 
-## 📊 Results Preview
+## Results Preview
 
 For typical music (like "Running Through Me"):
 
@@ -104,35 +69,3 @@ For typical music (like "Running Through Me"):
 | 99%             | ~76               | ~13:1             |
 
 *The human ear is remarkably tolerant of aggressive SVD compression!*
-
----
-
-## 🛠️ Dependencies
-
-- `numpy >= 2.0`
-- `librosa >= 0.11`
-- `matplotlib`
-- `scipy`
-- `soundfile`
-- `ipywidgets`
-
----
-
-## 📝 Author
-
-**Aaron Smolyar**  
-Linear Algebra / PCA Applications  
-December 2025
-
----
-
-## 📄 License
-
-MIT License — feel free to use, modify, and share!
-
----
-
-<p align="center">
-  <i>🎧 Music is just math we can hear 🎧</i>
-</p>
-
